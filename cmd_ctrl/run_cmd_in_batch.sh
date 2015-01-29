@@ -90,7 +90,7 @@ do
 		realII=$(( ii+1 ))
 		echo "[Msg][$(date)]Process [$realII] command line."
 		echo "[Msg][CMD]Cmd line: ${files[$ii]}"
-		eval ${files[$ii]} & 
+		eval "${files[$ii]} & " 
 		used_pid+=($!)
 		echo "[Msg][PID]${used_pid[@]}" 
 		## end   Commands to be processed . 
