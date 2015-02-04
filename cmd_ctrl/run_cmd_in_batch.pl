@@ -41,6 +41,7 @@ my $ttlN = scalar(@joblist);
 &tsmsg("[Err] Total $ttlN lines.\n"); 
 $opts{'beginLn'} <= 0 and $opts{'beginLn'} = 1; 
 $opts{'endLn'} > $ttlN and $opts{'endLn'} = $ttlN; 
+$opts{'endLn'} <= 0 and $opts{'endLn'} = $ttlN; 
 &tsmsg("[Err] Begin/End line modified to [$opts{'beginLn'} , $opts{'endLn'}]\n"); 
 
 my %jobDone; 
