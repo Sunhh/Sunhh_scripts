@@ -31,6 +31,7 @@ $opts{'cpuN'} = $opts{'cpuN'} // 0;
 $opts{'nprocF'} = $opts{'nprocF'} // 'Nproc'; 
 
 -t and !@ARGV and &usage(); 
+defined $opts{'help'} and &usage(); 
 
 my @joblist; 
 while (<>) {
